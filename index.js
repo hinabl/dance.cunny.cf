@@ -82,6 +82,7 @@ const server = http.createServer((req, res) => {
     req.headers['user-agent'] &&
     !req.headers['user-agent'].includes('curl')
   ) {
+    console.log('Site has been visited')
     res.writeHead(302, { Location: 'https://github.com/hinabl/dance.cunny.cf' });
     return res.end();
   }
